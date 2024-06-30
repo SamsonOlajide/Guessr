@@ -1,0 +1,75 @@
+<%- include('partials/header.ejs') %>
+<body>
+        <div id="info" style="display: none;" onclick="closeinfo()">
+            <h1 style="color: #1BD760; text-align:center; margin:100px" id="instruction-h1">How It Works</h1>
+            <div style="display: flex; justify-content:center; align-items:center;">
+                <ul id="instruction-list">
+                    <li>This created using Spotify API </li>
+                    <li>Based off of the API information, you get to decide what randomized artist has more followers than the other.</li>
+                    <li>Click on the artist you think has more followers.</li>
+                    <li>Get as many correct as you can!</li>
+                </ul>
+            </div>
+            <p style="color: #595959; font-size: 20px; font-weight: 300; text-align: center;"></p>
+        </div>
+
+
+    <div id="main-header">
+        <h1 style="color: #1BD760;" class = "left">Higher</h1>
+        <p style="color: white;">or</p>
+        <h1 style="color: #BD3030;" class = "right">Lower</h1>
+        <p style="font-size: 25px; color: #1BD760;">*Spotify follower edition*</p>    
+    </div>
+
+
+    <form action="/" method="POST">
+        <h1 style="color: #595959; text-align: center; margin-top: 50px;" id = 'question'> who has more followers on spotify? <span style="color: #1BD760;"><%=name1%></span> or <span style="color: #BD3030;"><%=name2%></span>?</h1>
+        <div id = 'outer-main-pane'>
+            <div id = "main-pane">
+                <div class="left-query">
+                    <button type="submit" name="chosenArtistID" value = "<%=artistID1%>" class ="user-pane">
+                        <img src="<%=artist_img1%>"alt="" name = "artistName" value="<%=name1%>" style="border-radius: 10px;">
+                        <p style="text-align: center;" name = "artistName1" value="<%=name1%>"><%= name1 %></p>
+                    </button>
+                </div>
+                <div>
+                    <% if(decision === 'Correct!'){%>
+                        <p style="text-align: center; font-size: 30px; color: #1BD760; font-weight: bold;" id="decision"><%=decision%></p>
+                    <%}else if (decision === 'Incorrect!'){%>
+                        <p style="text-align: center; font-size: 30px; color: #BD3030; font-weight: bold;" id="decision"><%=decision%></p>
+                    <%}%>
+                    <p id="score">score:</p>
+                    <%if (score === 0) {%>
+                        <p style="text-align: center; font-size:70px; color: #BD3030; font-weight: bold;"><%=score%></p>
+                    <%} else{%>
+                        <p style="text-align: center; font-size:70px; color: #1BD760; font-weight: bold;"><%=score%></p>
+                    <%}%>
+                </div>
+                <input type="text"  name = "artistID1" value="<%=artistID1%>" style="display: none;" >
+                <input type="text"  name = "artistID2" value="<%=artistID2%>" style="display: none;" >
+                <div class="right-query">
+                    <button type="submit" name="chosenArtistID" value="<%=artistID2%>" class ="user-pane">
+                        <img src="<%=artist_img2%>"alt="" name="artistName2" value="<%=name2%>" style="border-radius: 10px;">
+                        <p style="text-align: center;"><%= name2 %></p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script>
+        setTimeout(function(){
+            document.getElementById('decision').style.display = 'none';
+        }, 2000);
+
+        function showinfo(){
+                document.getElementById('info').style.display = 'block';
+                document.body.style.position = 'fixed';
+        }
+        function closeinfo(){
+            document.getElementById('info').style.display = 'none';
+            document.body.style.position = 'relative';
+        }
+    </script>
+</body>
+<%- include('partials/footer.ejs') %>

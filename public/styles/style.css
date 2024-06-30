@@ -1,0 +1,281 @@
+body{
+    background-color: #252525;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    font-style: normal;
+} 
+#main-header{
+    text-align: center;
+    font-weight: 800;
+    h1{
+        font-size: 70px;
+    }
+    .left{
+        margin-right:260px;
+    }
+    .right{
+        margin-left: 260px;
+    }
+
+    p{
+        font-size: 30px;
+    }
+}
+
+
+#outer-main-pane{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#main-pane{
+    background-color: #2e2e2e;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#main-pane img{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+#question{
+    font-size:48px;
+}
+
+.user-pane{
+        background-color: #2e2e2e;
+        border: none;
+        color: white;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+
+        
+
+        p{
+            font-size: 20px;
+            font-weight: 800;
+        }
+}
+
+.user-pane:hover{
+
+    p{
+        transition: 0.25s linear;
+        color: #1BD760;
+    }
+}
+
+.left-query{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-query{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score{
+    font-size: 40px; 
+    color:#595959; 
+    font-weight: bold; 
+    text-align:center; 
+    margin:0px 100px 0px 100px;
+}
+
+ul li{
+    list-style: disc outside none;
+    display: list-item;
+    margin-left: 1em;
+}
+
+#info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(80px);
+    background:none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+    li {
+        margin: 20px 0;
+        color:#0b0b0b;
+
+    }
+}
+
+#instruction-h1{
+    font-size:96px;
+}
+
+#instruction-list{
+    list-style-type:disc; 
+    text-decoration: solid; 
+    font-weight: bold; 
+    font-size: 40px;
+    max-width: 50%;
+    max-height: 50%;
+    
+}
+
+#instruction-button{
+    color:#595959; 
+    font-size:20px;
+    font-weight: 300;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+@media screen and (max-width: 1409px) {
+    #main-pane img{
+        max-width: 400px;
+        max-height: 400px;
+    }    
+    #question{
+        font-size: 32px;
+    }
+    #instruction-h1{
+        font-size: 48px;
+    }
+    #instruction-list{
+        font-size: 24px;
+    }
+    li{
+        margin: 10px 0;
+    }
+}
+  
+
+@media screen and (max-width: 1250px) {
+    #main-pane img{
+        max-width: 350px;
+        max-height: 350px;
+    }
+    #instruction-list{
+        font-size: 20px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1103px) {
+    #main-pane img{
+        max-width: 250px;
+        max-height: 250px;
+    }
+    #instruction-list{
+        font-size: 18px;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 912px) {
+    #main-pane img{
+        max-width: 350px;
+        max-height: 350px;
+    }  
+    #main-header{
+        h1{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .left{
+            margin-right: 0px;
+        }
+        .right{
+            margin-left: 0px;
+        }   
+    }
+
+    #main-pane{
+        display: block;
+        padding: 5px;
+    }
+
+    #question{
+        font-size: 20px;
+    }
+    .user-pane{
+        margin: 0px;
+    }
+    .left-query{
+        margin-right: 0px;
+    }
+    #score{
+        margin:0px;
+    }  
+    #instruction-list{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+
+    #main-pane img{
+        max-width: 250px;
+        max-height: 250px;
+    }  
+
+    #main-header{
+        h1{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .left{
+            margin-right: 0px;
+            font-size: 40px;
+        }
+        .right{
+            margin-left: 0px;
+            font-size: 40px;
+        }   
+        p{
+            font-size: 20px;
+        }
+        #instruction-list{
+            font-size: 20px;
+        }
+    }
+
+    #main-pane{
+        display: block;
+    }
+
+    #question{
+        font-size: 20px;
+    }
+    #instruction-h1{
+        font-size: 30px;
+    }
+    #instruction-list{
+        font-size: 20px;
+    }
+}
+
+
+  
